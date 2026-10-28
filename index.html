@@ -439,6 +439,50 @@
 
         <article class="card project reveal">
           <div class="project-head">
+            <p class="card-kicker">FinOps · Commitment optimization</p>
+            <h4>AWS commitment sizing: Savings Plan optimization on anonymized cost data</h4>
+          </div>
+          <p class="project-problem">
+            Decide how much AWS spend to cover with Savings Plans or Reserved Instances. Commit
+            too little and savings are left on the table; commit too much and unused hours are
+            still billed as waste.
+          </p>
+          <p class="project-approach">
+            DuckDB over 20,901,528 hourly usage rows and 10,955 pricing rows from one anonymized
+            AWS organization with multiple linked accounts, complete months 2025-07 to 2026-05.
+            Data-readiness checks, a savings bridge (commitment discount, Spot savings,
+            unused-commitment waste, reconciliation), and an exact optimizer that allocates
+            commitment hour by hour, highest discount first, at every commitment breakpoint.
+            Followed by window-sensitivity analysis, a baseline backtest, an audit of 29 existing
+            commitments, and a coverage/utilization frontier.
+          </p>
+          <ul class="results" aria-label="Key results">
+            <li><span class="res-num">11.52%</span> <span class="res-txt">Effective savings rate today: $111,028.43 net savings against $963,836.65 on-demand equivalent, complete months only</span></li>
+            <li><span class="res-num">$23.14/h</span> <span class="res-txt">Optimal 3-year Compute Savings Plan on the latest 3 complete months: $38,581.82 savings, 99.41% utilization, 94.05% coverage</span></li>
+            <li><span class="res-num">$21.51/h</span> <span class="res-txt">Recommended operating point, the highest-utilization point within 95% of peak savings: $37,156.94 savings, 100.00% utilization, 88.77% coverage, against a current posture of $19.46/hour</span></li>
+          </ul>
+          <p class="caveat">
+            Retrospective analysis of one organization's real-but-anonymized AWS cost data.
+            Forward-looking forecasting and multi-instrument commitment baskets are not yet
+            implemented.
+          </p>
+          <ul class="chips" aria-label="Stack">
+            <li class="chip">Python</li>
+            <li class="chip">DuckDB</li>
+            <li class="chip">pandas</li>
+            <li class="chip">Parquet</li>
+            <li class="chip">matplotlib</li>
+            <li class="chip">Jupyter</li>
+            <li class="chip">pytest</li>
+          </ul>
+          <p class="project-links">
+            <a class="link-out" href="https://github.com/andresrogers/Cloud-Cost-Forecast-and-Optimization" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+            <a class="link-out" href="https://github.com/andresrogers/Cloud-Cost-Forecast-and-Optimization/blob/main/output/report/repo_report.md" target="_blank" rel="noopener noreferrer">Case study report<span class="out" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-head">
             <p class="card-kicker">Generative AI · RAG &amp; evaluation</p>
             <h4>LangChain RAG for clinical trials (defensible ground-truth workflow)</h4>
           </div>
