@@ -401,101 +401,6 @@
 
         <article class="card project reveal">
           <div class="project-head">
-            <p class="card-kicker">Clinical data science · Phase I to III</p>
-            <h4>NTX-101: sponsor-style clinical development portfolio</h4>
-          </div>
-          <p class="project-problem">
-            Simulate a full Alzheimer's development program with standards-aware structure,
-            traceable derivations, and explicit decision gates instead of isolated descriptive
-            plots.
-          </p>
-          <p class="project-approach">
-            CDISC-shaped public structure with a bounded synthetic continuity bridge:
-            raw XPT/RDA to interim parquet to harmonized SDTM-like domains to ADaM-like analysis
-            datasets to gated reports. 12 CDISC Pilot XPT domains and 32 SafetyData RDA objects
-            normalized into parquet, ADaM-like <code>ADSL</code>, <code>ADAE</code>,
-            <code>ADLB</code>, <code>ADVS</code>, <code>ADEFF</code> and <code>ADTTE</code>
-            outputs, formal treatment-vs-placebo comparisons, survival analysis, and an
-            interpretable logistic regression primary model benchmarked against elastic net and
-            random forest. A thin R reference layer cross-checks selected derivations.
-          </p>
-          <ul class="results" aria-label="Key results">
-            <li><span class="res-num">0.868</span> <span class="res-txt">Phase II ROC AUC, logistic regression primary model</span></li>
-            <li><span class="res-num">19.07 pp</span> <span class="res-txt">Phase II responder uplift, primary endpoint p = 0.0019</span></li>
-            <li><span class="res-num">83.58 d</span> <span class="res-txt">Phase III median delay to worsening, log-rank p = 0.0421</span></li>
-          </ul>
-          <p class="caveat">
-            <strong>NTX-101 is a fictional investigational asset.</strong> The data combine a
-            public CDISC structure with a synthetic continuity bridge. This is portfolio
-            simulation work: not sponsor production, not GxP validated, and not regulatory
-            evidence.
-          </p>
-          <ul class="chips" aria-label="Stack">
-            <li class="chip">Python</li>
-            <li class="chip">R</li>
-            <li class="chip">CDISC SDTM</li>
-            <li class="chip">ADaM</li>
-            <li class="chip">Parquet</li>
-            <li class="chip">Survival analysis</li>
-            <li class="chip">Logistic regression</li>
-            <li class="chip">Random forest</li>
-            <li class="chip">Elastic net</li>
-            <li class="chip">pytest</li>
-            <li class="chip">ruff</li>
-          </ul>
-          <p class="project-links">
-            <a class="link-out" href="https://github.com/andresrogers/clinical-trial-machine-learning-for-biopharma-cdisc-sdtm-adam" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
-            <a class="link-out" href="https://andresrogers.github.io/clinical-trial-machine-learning-for-biopharma-cdisc-sdtm-adam/final_report/index.html" target="_blank" rel="noopener noreferrer">Live executive report<span class="out" aria-hidden="true">&#8599;</span></a>
-          </p>
-        </article>
-
-        <article class="card project reveal">
-          <div class="project-head">
-            <p class="card-kicker">Generative AI · RAG &amp; evaluation</p>
-            <h4>Clinical-trials RAG with a defensible ground-truth workflow</h4>
-          </div>
-          <p class="project-problem">
-            Answer clinical-trial questions with grounded, citable evidence across heterogeneous
-            sources, and produce evaluation-grade annotations.
-          </p>
-          <p class="project-approach">
-            Ingests AACT metadata, PubMed and PMC publications (XML and PDF), and FDA drug
-            labels. Section-aware hybrid chunking preserves filename, page, section title,
-            NCT id and PMID for precise citations. Embeddings are persisted into a Chroma
-            vectorstore holding <strong>5,532 indexed chunks</strong> (PDF approx. 1,411,
-            PubMed XML approx. 305, FDA labels approx. 3,816); the master clinical-trials table
-            covers <strong>127 Phase III trials</strong>. Retrieval combines dense embeddings
-            with BM25 and optional cross-encoder reranking; ground truth follows an extractive
-            draft, human review, refined answer pipeline; generation quality is scored with
-            RAGAS using a judge model.
-          </p>
-          <ul class="results" aria-label="Key results">
-            <li><span class="res-num">0.972</span> <span class="res-txt">Faithfulness (RAGAS, n = 10 evaluation questions)</span></li>
-            <li><span class="res-num">0.901</span> <span class="res-txt">Factual correctness F1 (RAGAS, n = 10)</span></li>
-            <li><span class="res-num">0.900</span> <span class="res-txt">Context recall and answer relevancy (RAGAS, n = 10)</span></li>
-            <li><span class="res-num">0.733</span> <span class="res-txt">Context precision (RAGAS, n = 10): remaining room to cut noisy context</span></li>
-          </ul>
-          <p class="caveat">
-            Public-data portfolio project. RAGAS scores come from an evaluation sample of
-            10 questions, which bounds how far they generalize.
-          </p>
-          <ul class="chips" aria-label="Stack">
-            <li class="chip">Python</li>
-            <li class="chip">Chroma</li>
-            <li class="chip">Hybrid retrieval</li>
-            <li class="chip">BM25</li>
-            <li class="chip">Cross-encoder reranking</li>
-            <li class="chip">RAGAS</li>
-            <li class="chip">OpenRouter</li>
-            <li class="chip">Jupyter</li>
-          </ul>
-          <p class="project-links">
-            <a class="link-out" href="https://github.com/andresrogers/ai-clinical-trials-rag" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
-          </p>
-        </article>
-
-        <article class="card project reveal">
-          <div class="project-head">
             <p class="card-kicker">Pricing · Elasticity &amp; optimization</p>
             <h4>Airbnb price-demand elasticity and MILP price optimization</h4>
           </div>
@@ -529,6 +434,52 @@
           </ul>
           <p class="project-links">
             <a class="link-out" href="https://github.com/andresrogers/airbnb_bookings_price_demand_elasticity_pyspark" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-head">
+            <p class="card-kicker">Generative AI · RAG &amp; evaluation</p>
+            <h4>LangChain RAG for clinical trials (defensible ground-truth workflow)</h4>
+          </div>
+          <p class="project-problem">
+            Answer clinical-trial questions with grounded, citable evidence across heterogeneous
+            sources, and produce evaluation-grade annotations.
+          </p>
+          <p class="project-approach">
+            Ingests AACT metadata, PubMed and PMC publications (XML and PDF), and FDA drug
+            labels. Section-aware hybrid chunking preserves filename, page, section title,
+            NCT id and PMID for precise citations. Embeddings are persisted into a Chroma
+            vectorstore holding <strong>5,532 indexed chunks</strong> (PDF approx. 1,411,
+            PubMed XML approx. 305, FDA labels approx. 3,816); the master clinical-trials table
+            covers <strong>127 Phase III trials</strong>. Retrieval combines dense embeddings
+            with BM25 and optional cross-encoder reranking; ground truth follows an extractive
+            draft, human review, refined answer pipeline; generation quality is scored with
+            RAGAS using a judge model.
+          </p>
+          <ul class="results" aria-label="Key results">
+            <li><span class="res-num">0.972</span> <span class="res-txt">Faithfulness (RAGAS, n = 10 evaluation questions)</span></li>
+            <li><span class="res-num">0.901</span> <span class="res-txt">Factual correctness F1 (RAGAS, n = 10)</span></li>
+            <li><span class="res-num">0.900</span> <span class="res-txt">Context recall and answer relevancy (RAGAS, n = 10)</span></li>
+            <li><span class="res-num">0.733</span> <span class="res-txt">Context precision (RAGAS, n = 10): remaining room to cut noisy context</span></li>
+          </ul>
+          <p class="caveat">
+            Public-data portfolio project. RAGAS scores come from an evaluation sample of
+            10 questions, which bounds how far they generalize.
+          </p>
+          <ul class="chips" aria-label="Stack">
+            <li class="chip">Python</li>
+            <li class="chip">LangChain</li>
+            <li class="chip">Chroma</li>
+            <li class="chip">Hybrid retrieval</li>
+            <li class="chip">BM25</li>
+            <li class="chip">Cross-encoder reranking</li>
+            <li class="chip">RAGAS</li>
+            <li class="chip">OpenRouter</li>
+            <li class="chip">Jupyter</li>
+          </ul>
+          <p class="project-links">
+            <a class="link-out" href="https://github.com/andresrogers/ai-clinical-trials-rag" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
           </p>
         </article>
 
@@ -588,6 +539,56 @@
           </ul>
           <p class="project-links">
             <a class="link-out" href="https://github.com/andresrogers/NLP_Classification" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-head">
+            <p class="card-kicker">Clinical data science · Phase I to III</p>
+            <h4>NTX-101: sponsor-style clinical development portfolio</h4>
+          </div>
+          <p class="project-problem">
+            Simulate a full Alzheimer's development program with standards-aware structure,
+            traceable derivations, and explicit decision gates instead of isolated descriptive
+            plots.
+          </p>
+          <p class="project-approach">
+            CDISC-shaped public structure with a bounded synthetic continuity bridge:
+            raw XPT/RDA to interim parquet to harmonized SDTM-like domains to ADaM-like analysis
+            datasets to gated reports. 12 CDISC Pilot XPT domains and 32 SafetyData RDA objects
+            normalized into parquet, ADaM-like <code>ADSL</code>, <code>ADAE</code>,
+            <code>ADLB</code>, <code>ADVS</code>, <code>ADEFF</code> and <code>ADTTE</code>
+            outputs, formal treatment-vs-placebo comparisons, survival analysis, and an
+            interpretable logistic regression primary model benchmarked against elastic net and
+            random forest. A thin R reference layer cross-checks selected derivations.
+          </p>
+          <ul class="results" aria-label="Key results">
+            <li><span class="res-num">0.868</span> <span class="res-txt">Phase II ROC AUC, logistic regression primary model</span></li>
+            <li><span class="res-num">19.07 pp</span> <span class="res-txt">Phase II responder uplift, primary endpoint p = 0.0019</span></li>
+            <li><span class="res-num">83.58 d</span> <span class="res-txt">Phase III median delay to worsening, log-rank p = 0.0421</span></li>
+          </ul>
+          <p class="caveat">
+            <strong>NTX-101 is a fictional investigational asset.</strong> The data combine a
+            public CDISC structure with a synthetic continuity bridge. This is portfolio
+            simulation work: not sponsor production, not GxP validated, and not regulatory
+            evidence.
+          </p>
+          <ul class="chips" aria-label="Stack">
+            <li class="chip">Python</li>
+            <li class="chip">R</li>
+            <li class="chip">CDISC SDTM</li>
+            <li class="chip">ADaM</li>
+            <li class="chip">Parquet</li>
+            <li class="chip">Survival analysis</li>
+            <li class="chip">Logistic regression</li>
+            <li class="chip">Random forest</li>
+            <li class="chip">Elastic net</li>
+            <li class="chip">pytest</li>
+            <li class="chip">ruff</li>
+          </ul>
+          <p class="project-links">
+            <a class="link-out" href="https://github.com/andresrogers/clinical-trial-machine-learning-for-biopharma-cdisc-sdtm-adam" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+            <a class="link-out" href="https://andresrogers.github.io/clinical-trial-machine-learning-for-biopharma-cdisc-sdtm-adam/final_report/index.html" target="_blank" rel="noopener noreferrer">Live executive report<span class="out" aria-hidden="true">&#8599;</span></a>
           </p>
         </article>
       </div>
