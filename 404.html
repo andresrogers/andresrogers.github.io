@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · Andrés Rogers</title>
+<meta name="description" content="That page does not exist on andresrogers.github.io.">
+<meta name="robots" content="noindex, follow">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0a0c0f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>
+(function () {
+  var root = document.documentElement;
+  try {
+    var s = window.localStorage.getItem("theme");
+    var t = (s === "light" || s === "dark")
+      ? s
+      : (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    root.setAttribute("data-theme", t);
+  } catch (e) {
+    root.setAttribute("data-theme", "dark");
+  }
+})();
+</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">AR</span>
+      <span class="brand-text">
+        <span class="brand-name">Andrés Rogers</span>
+        <span class="brand-role">Senior Data Scientist · ML Scientist</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4 17 7M7 17l-1.6 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-404" aria-labelledby="nf-title">
+    <div class="wrap">
+      <p class="code">Error 404</p>
+      <h1 id="nf-title">That page does not exist</h1>
+      <p>
+        The address you followed is not part of this site. The portfolio, selected work, and
+        contact details all live on the home page.
+      </p>
+      <div class="nf-links">
+        <a class="btn btn-primary" href="/">Go to the home page</a>
+        <a class="btn" href="/#work">Selected work</a>
+        <a class="btn" href="/#contact">Contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-name">Andrés Rogers · 2026</p>
+    <p class="footer-src">
+      <a href="https://github.com/andresrogers/andresrogers.github.io" target="_blank" rel="noopener noreferrer">Source of this site<span class="out" aria-hidden="true">&#8599;</span></a>
+    </p>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

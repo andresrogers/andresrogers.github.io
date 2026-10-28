@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrés Rogers · Senior Data Scientist &amp; ML Scientist</title>
+<meta name="description" content="ML Scientist and Senior Data Scientist: production dynamic pricing, forecasting, causal inference, revenue optimization, and agentic AI engineering.">
+<meta name="author" content="Andrés Rogers">
+<link rel="canonical" href="https://andresrogers.github.io/">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0a0c0f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Andrés Rogers">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Andrés Rogers · Senior Data Scientist &amp; ML Scientist">
+<meta property="og:description" content="Production dynamic pricing, forecasting, causal inference, revenue optimization, and agentic AI engineering. 12+ year engineering trajectory.">
+<meta property="og:url" content="https://andresrogers.github.io/">
+<meta property="og:image" content="https://andresrogers.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Andrés Rogers, Senior Data Scientist and ML Scientist">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Andrés Rogers · Senior Data Scientist &amp; ML Scientist">
+<meta name="twitter:description" content="Production dynamic pricing, forecasting, causal inference, revenue optimization, and agentic AI engineering. 12+ year engineering trajectory.">
+<meta name="twitter:image" content="https://andresrogers.github.io/assets/og-image.png">
+<meta name="twitter:image:alt" content="Andrés Rogers, Senior Data Scientist and ML Scientist">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<script>
+(function () {
+  var root = document.documentElement;
+  try {
+    var s = window.localStorage.getItem("theme");
+    var t = (s === "light" || s === "dark")
+      ? s
+      : (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    root.setAttribute("data-theme", t);
+  } catch (e) {
+    root.setAttribute("data-theme", "dark");
+  }
+  root.classList.add("js");
+  window.__revealGuard = window.setTimeout(function () {
+    root.classList.remove("js");
+  }, 2500);
+})();
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Andrés Rogers",
+  "alternateName": "Andres Rogers",
+  "jobTitle": "Senior Data Scientist / ML Scientist",
+  "description": "Senior Data Scientist and ML Scientist with a 12+ year engineering trajectory across revenue management, financial services, e-commerce, industrial systems, and applied research.",
+  "url": "https://andresrogers.github.io/",
+  "email": "mailto:andres.rogers@gmail.com",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Chile"
+  },
+  "sameAs": [
+    "https://github.com/andresrogers",
+    "https://www.linkedin.com/in/andres-rogers"
+  ],
+  "knowsAbout": [
+    "Dynamic Pricing",
+    "Revenue Optimization",
+    "Demand Forecasting",
+    "Time Series",
+    "Causal Inference",
+    "Difference-in-Differences",
+    "Incrementality Measurement",
+    "Bayesian Modeling",
+    "Mathematical Optimization",
+    "Mixed-Integer Linear Programming",
+    "Production Machine Learning",
+    "MLOps",
+    "Generative AI",
+    "Large Language Models",
+    "Retrieval-Augmented Generation",
+    "Agentic AI",
+    "Multi-Agent Systems"
+  ],
+  "knowsLanguage": [
+    {"@type": "Language", "name": "Spanish"},
+    {"@type": "Language", "name": "English"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">AR</span>
+      <span class="brand-text">
+        <span class="brand-name">Andrés Rogers</span>
+        <span class="brand-role">Senior Data Scientist · ML Scientist</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#agentic">Agentic AI</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4 17 7M7 17l-1.6 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">ML Scientist · Senior Data Scientist · Agentic AI Engineering</p>
+      <h1 id="hero-title">Andrés Rogers<span class="h1-suffix">, MSc</span></h1>
+      <p class="hero-lede">
+        I build production decision systems for dynamic pricing, forecasting, revenue
+        optimization, and causal measurement, and I design multi-agent workflows for
+        production software engineering and data science.
+      </p>
+      <p class="hero-stance">
+        My focus is not just model accuracy. I build systems where the
+        <strong>data is trustworthy</strong>, the <strong>economic impact is measurable</strong>,
+        the <strong>implementation is production-ready</strong>, and
+        <strong>automated decisions remain verifiable by humans</strong>.
+      </p>
+
+      <p class="hero-meta">
+        <span class="meta-dot" aria-hidden="true"></span>
+        Chile · Remote collaboration with US/Canada teams · EST timezone
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">Selected work</a>
+        <a class="btn" href="#experience">Experience</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+
+      <ul class="hero-links" aria-label="Primary links">
+        <li>
+          <a class="link-chip" href="https://github.com/andresrogers" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/>
+            </svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a class="link-chip" href="https://www.linkedin.com/in/andres-rogers" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6.5 0h3.83v1.64h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.84 0-2.12 1.44-2.12 2.92V21h-4V9Z" fill="currentColor"/>
+            </svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a class="link-chip" href="mailto:andres.rogers@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M3.5 5h17A1.5 1.5 0 0 1 22 6.5v11A1.5 1.5 0 0 1 20.5 19h-17A1.5 1.5 0 0 1 2 17.5v-11A1.5 1.5 0 0 1 3.5 5Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            Email
+          </a>
+        </li>
+      </ul>
+
+      <ul class="metrics" aria-label="Headline impact metrics">
+        <li class="metric">
+          <span class="metric-value">US$3M</span>
+          <span class="metric-label">ARR from production dynamic pricing at LATAM Airlines</span>
+        </li>
+        <li class="metric">
+          <span class="metric-value">20%<span class="sr-only"> to</span> <span class="arrow" aria-hidden="true">&#8594;</span> 9.5%</span>
+          <span class="metric-label">Demand forecasting error, ensemble time series on GCP Vertex AI</span>
+        </li>
+        <li class="metric">
+          <span class="metric-value">43%<span class="sr-only"> to</span> <span class="arrow" aria-hidden="true">&#8594;</span> 62%</span>
+          <span class="metric-label">Bayesian prospect identification, no increase in false positives</span>
+        </li>
+        <li class="metric">
+          <span class="metric-value">+12%</span>
+          <span class="metric-label">E-commerce conversion through dynamic pricing</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="section-kicker">01 · About</p>
+        <h2 id="about-title">Decision systems, not dashboards</h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-main reveal">
+          <p class="lead">
+            Senior Data Scientist and ML Scientist with a <strong>12+ year engineering
+            trajectory</strong> across revenue management, financial services, e-commerce,
+            industrial systems, and applied research.
+          </p>
+          <p>
+            A recurring theme in my work is connecting predictive models to the actual decision
+            being optimized rather than treating prediction as the final product. That means
+            elasticity curves wired into a pricing optimizer, forecasts carrying calibrated
+            intervals, causal estimates where experiments are not feasible, and pipelines whose
+            numbers survive reconciliation against production data.
+          </p>
+          <p>
+            I trained as an engineer at the <strong>University of Chile</strong> (ranked top 1%
+            globally and top 6 regionally by QS Rankings 2026), with an
+            <strong>MSc in Chemical Engineering</strong> and a degree as
+            <strong>Civil Engineer with a Biotechnology specialization</strong>, both
+            <em>Summa Cum Laude</em>. The quantitative and industrial engineering track behind
+            those degrees is the same toolkit I apply now: statistical modeling, mathematical
+            optimization, industrial process modeling, and data-driven methods.
+          </p>
+        </div>
+
+        <div class="about-side reveal">
+          <h3 class="side-title">I specialize in production systems at the intersection of</h3>
+          <ul class="spec-list">
+            <li>Dynamic pricing, promotions &amp; revenue optimization</li>
+            <li>Demand forecasting &amp; time series</li>
+            <li>Causal inference &amp; incrementality measurement</li>
+            <li>Bayesian modeling &amp; statistical machine learning</li>
+            <li>Financial data integrity &amp; decision support</li>
+            <li>Machine learning engineering &amp; MLOps</li>
+            <li>Generative AI, LLMs, RAG &amp; agentic workflows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected work -->
+  <section class="section section-alt" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="section-kicker">02 · Selected work</p>
+        <h2 id="work-title">Measured impact and public code</h2>
+        <p class="section-sub">
+          Professional work was built inside employer systems: that code is proprietary and is
+          not public. The open-source portfolio projects below are public repositories you can
+          read and run, with results labelled by the data they were measured on.
+        </p>
+      </header>
+
+      <h3 class="subhead reveal" id="impact-highlights">Impact highlights</h3>
+      <ul class="impact-list reveal">
+        <li>
+          <span class="impact-figure">US$3M ARR</span>
+          generated through production dynamic pricing models using price-demand elasticity and
+          promotional optimization at LATAM Airlines.
+        </li>
+        <li>
+          <span class="impact-figure">20% to 9.5%</span>
+          demand forecasting error, with ensemble time-series models deployed end to end on
+          GCP Vertex AI.
+        </li>
+        <li>
+          <span class="impact-figure">43% to 62%</span>
+          Bayesian prospect identification, with no increase in false positives, using a
+          hierarchical PyMC model.
+        </li>
+        <li>
+          <span class="impact-figure">+12%</span>
+          e-commerce conversion through dynamic pricing.
+        </li>
+        <li>
+          <span class="impact-figure">+7%</span>
+          industrial copper yield through mathematical simulation and process optimization.
+        </li>
+        <li>
+          <span class="impact-figure">Incrementality</span>
+          of promotions measured with Difference-in-Differences and quasi-experimental causal
+          inference when traditional A/B testing was not feasible.
+        </li>
+        <li>
+          <span class="impact-figure">Revenue-critical</span>
+          financial and FinOps pipelines audited through production-data reconciliation,
+          edge-case analysis, regression checks, and freshness controls.
+        </li>
+        <li>
+          <span class="impact-figure">Industrial ML</span>
+          systems built for predictive optimization, soft sensing, physics-informed neural
+          networks, anomaly detection, and industrial time series.
+        </li>
+      </ul>
+
+      <h3 class="subhead reveal" id="case-studies">Professional case studies</h3>
+      <p class="subhead-note reveal">Employer systems. Proprietary code, no public repository.</p>
+
+      <div class="cases">
+        <article class="card case reveal">
+          <div class="case-head">
+            <p class="card-kicker">Aviation · Pricing &amp; revenue management</p>
+            <h4>Dynamic pricing and promotional optimization</h4>
+          </div>
+          <dl class="case-body">
+            <dt>Problem</dt>
+            <dd>
+              Price and promotion decisions across routes had to move
+              revenue, not only forecast accuracy, and campaign effects had to be measured where
+              a clean A/B test was not available.
+            </dd>
+            <dt>Approach</dt>
+            <dd>
+              Production ML for dynamic pricing, promotional optimization, route-level price
+              elasticity estimation, demand forecasting, customer propensity, churn, and
+              ancillary revenue, with MILP-based ancillary revenue optimization and
+              Difference-in-Differences for campaign incrementality.
+            </dd>
+            <dt>Results</dt>
+            <dd>
+              <ul class="tick-list">
+                <li><strong>US$3M ARR</strong> from production dynamic pricing at LATAM Airlines</li>
+                <li>Forecast error reduced from <strong>20% to 9.5%</strong></li>
+                <li>Production deployment on <strong>Vertex AI</strong></li>
+              </ul>
+            </dd>
+          </dl>
+          <ul class="chips" aria-label="Technologies">
+            <li class="chip">Python</li>
+            <li class="chip">GCP Vertex AI</li>
+            <li class="chip">Time-series ensembles</li>
+            <li class="chip">Price elasticity</li>
+            <li class="chip">MILP</li>
+            <li class="chip">Difference-in-Differences</li>
+          </ul>
+        </article>
+
+        <article class="card case reveal">
+          <div class="case-head">
+            <p class="card-kicker">Financial systems</p>
+            <h4>Bayesian decision support on revenue-critical pipelines</h4>
+          </div>
+          <dl class="case-body">
+            <dt>Problem</dt>
+            <dd>
+              Revenue and financial systems needed numbers that hold up under scrutiny: forecasts
+              with honest uncertainty, and pipelines whose outputs reconcile against production
+              data before anyone acts on them.
+            </dd>
+            <dt>Approach</dt>
+            <dd>
+              Hierarchical Bayesian modeling, walk-forward forecasting with calibrated prediction
+              intervals, revenue-critical pipeline auditing, production-data reconciliation, AWS
+              production deployment, automated business-system integration, and multi-agent
+              engineering in large codebases behind reviewer and judge quality gates.
+            </dd>
+          </dl>
+          <ul class="chips" aria-label="Technologies">
+            <li class="chip">PyMC</li>
+            <li class="chip">Bayesian hierarchical models</li>
+            <li class="chip">Walk-forward forecasting</li>
+            <li class="chip">AWS</li>
+            <li class="chip">MLOps</li>
+            <li class="chip">Agentic engineering</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="subhead reveal" id="projects">Open-source portfolio projects</h3>
+      <p class="subhead-note reveal">
+        Public repositories. Every result below states the data it was measured on.
+      </p>
+
+      <div class="projects">
+
+        <article class="card project reveal">
+          <div class="project-head">
+            <p class="card-kicker">Clinical data science · Phase I to III</p>
+            <h4>NTX-101: sponsor-style clinical development portfolio</h4>
+          </div>
+          <p class="project-problem">
+            Simulate a full Alzheimer's development program with standards-aware structure,
+            traceable derivations, and explicit decision gates instead of isolated descriptive
+            plots.
+          </p>
+          <p class="project-approach">
+            CDISC-shaped public structure with a bounded synthetic continuity bridge:
+            raw XPT/RDA to interim parquet to harmonized SDTM-like domains to ADaM-like analysis
+            datasets to gated reports. 12 CDISC Pilot XPT domains and 32 SafetyData RDA objects
+            normalized into parquet, ADaM-like <code>ADSL</code>, <code>ADAE</code>,
+            <code>ADLB</code>, <code>ADVS</code>, <code>ADEFF</code> and <code>ADTTE</code>
+            outputs, formal treatment-vs-placebo comparisons, survival analysis, and an
+            interpretable logistic regression primary model benchmarked against elastic net and
+            random forest. A thin R reference layer cross-checks selected derivations.
+          </p>
+          <ul class="results" aria-label="Key results">
+            <li><span class="res-num">0.868</span> <span class="res-txt">Phase II ROC AUC, logistic regression primary model</span></li>
+            <li><span class="res-num">19.07 pp</span> <span class="res-txt">Phase II responder uplift, primary endpoint p = 0.0019</span></li>
+            <li><span class="res-num">83.58 d</span> <span class="res-txt">Phase III median delay to worsening, log-rank p = 0.0421</span></li>
+          </ul>
+          <p class="caveat">
+            <strong>NTX-101 is a fictional investigational asset.</strong> The data combine a
+            public CDISC structure with a synthetic continuity bridge. This is portfolio
+            simulation work: not sponsor production, not GxP validated, and not regulatory
+            evidence.
+          </p>
+          <ul class="chips" aria-label="Stack">
+            <li class="chip">Python</li>
+            <li class="chip">R</li>
+            <li class="chip">CDISC SDTM</li>
+            <li class="chip">ADaM</li>
+            <li class="chip">Parquet</li>
+            <li class="chip">Survival analysis</li>
+            <li class="chip">Logistic regression</li>
+            <li class="chip">Random forest</li>
+            <li class="chip">Elastic net</li>
+            <li class="chip">pytest</li>
+            <li class="chip">ruff</li>
+          </ul>
+          <p class="project-links">
+            <a class="link-out" href="https://github.com/andresrogers/clinical-trial-machine-learning-for-biopharma-cdisc-sdtm-adam" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+            <a class="link-out" href="https://andresrogers.github.io/clinical-trial-machine-learning-for-biopharma-cdisc-sdtm-adam/final_report/index.html" target="_blank" rel="noopener noreferrer">Live executive report<span class="out" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-head">
+            <p class="card-kicker">Generative AI · RAG &amp; evaluation</p>
+            <h4>Clinical-trials RAG with a defensible ground-truth workflow</h4>
+          </div>
+          <p class="project-problem">
+            Answer clinical-trial questions with grounded, citable evidence across heterogeneous
+            sources, and produce evaluation-grade annotations.
+          </p>
+          <p class="project-approach">
+            Ingests AACT metadata, PubMed and PMC publications (XML and PDF), and FDA drug
+            labels. Section-aware hybrid chunking preserves filename, page, section title,
+            NCT id and PMID for precise citations. Embeddings are persisted into a Chroma
+            vectorstore holding <strong>5,532 indexed chunks</strong> (PDF approx. 1,411,
+            PubMed XML approx. 305, FDA labels approx. 3,816); the master clinical-trials table
+            covers <strong>127 Phase III trials</strong>. Retrieval combines dense embeddings
+            with BM25 and optional cross-encoder reranking; ground truth follows an extractive
+            draft, human review, refined answer pipeline; generation quality is scored with
+            RAGAS using a judge model.
+          </p>
+          <ul class="results" aria-label="Key results">
+            <li><span class="res-num">0.972</span> <span class="res-txt">Faithfulness (RAGAS, n = 10 evaluation questions)</span></li>
+            <li><span class="res-num">0.901</span> <span class="res-txt">Factual correctness F1 (RAGAS, n = 10)</span></li>
+            <li><span class="res-num">0.900</span> <span class="res-txt">Context recall and answer relevancy (RAGAS, n = 10)</span></li>
+            <li><span class="res-num">0.733</span> <span class="res-txt">Context precision (RAGAS, n = 10): remaining room to cut noisy context</span></li>
+          </ul>
+          <p class="caveat">
+            Public-data portfolio project. RAGAS scores come from an evaluation sample of
+            10 questions, which bounds how far they generalize.
+          </p>
+          <ul class="chips" aria-label="Stack">
+            <li class="chip">Python</li>
+            <li class="chip">Chroma</li>
+            <li class="chip">Hybrid retrieval</li>
+            <li class="chip">BM25</li>
+            <li class="chip">Cross-encoder reranking</li>
+            <li class="chip">RAGAS</li>
+            <li class="chip">OpenRouter</li>
+            <li class="chip">Jupyter</li>
+          </ul>
+          <p class="project-links">
+            <a class="link-out" href="https://github.com/andresrogers/ai-clinical-trials-rag" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-head">
+            <p class="card-kicker">Pricing · Elasticity &amp; optimization</p>
+            <h4>Airbnb price-demand elasticity and MILP price optimization</h4>
+          </div>
+          <p class="project-problem">
+            Predicting occupancy is not the deliverable. The deliverable is a price schedule that
+            maximizes annual revenue under business constraints.
+          </p>
+          <p class="project-approach">
+            End-to-end PySpark pipeline: exploratory analysis and segment-level price elasticity,
+            feature engineering including elasticity slopes, model comparison for occupancy rate,
+            then Mixed-Integer Linear Programming with PuLP to optimize price across 6 segments
+            (3 seasons &times; weekday/weekend), combining ML-predicted baseline occupancy with
+            regime-aware elasticity curves.
+          </p>
+          <ul class="results" aria-label="Key results">
+            <li><span class="res-num">R&sup2; 0.885</span> <span class="res-txt">Best occupancy model, GBTRegressor (RMSE 0.0786, MAE 0.0599), ahead of PyTorch MLP 0.876, linear regression 0.854, random forest 0.851, TensorFlow/Keras MLP 0.815</span></li>
+            <li><span class="res-num">+4.5%</span> <span class="res-txt">Simulated annual revenue lift for one Paris listing profile: 30,215 baseline to 31,560 optimized, under &plusmn;50% price bounds and a 50% minimum-occupancy constraint</span></li>
+            <li><span class="res-num">+14.1%</span> <span class="res-txt">Largest segment lift, high-season weekend; weighted average price 107.23 to 129.89, average occupancy 75.5% to 65.0%</span></li>
+          </ul>
+          <p class="caveat">
+            Results are simulated on a public Airbnb dataset, not a production deployment.
+          </p>
+          <ul class="chips" aria-label="Stack">
+            <li class="chip">PySpark</li>
+            <li class="chip">PuLP</li>
+            <li class="chip">MILP</li>
+            <li class="chip">GBTRegressor</li>
+            <li class="chip">PyTorch</li>
+            <li class="chip">TensorFlow/Keras</li>
+            <li class="chip">Parquet</li>
+          </ul>
+          <p class="project-links">
+            <a class="link-out" href="https://github.com/andresrogers/airbnb_bookings_price_demand_elasticity_pyspark" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-head">
+            <p class="card-kicker">Classification · Imbalanced data</p>
+            <h4>Flight delay probability at SCL airport</h4>
+          </div>
+          <p class="project-problem">
+            Predict the probability of delay for flights landing at and taking off from SCL
+            airport, on a binary target with imbalanced classes at a 4.4 to 1 ratio.
+          </p>
+          <p class="project-approach">
+            Evaluated three algorithms compatible with imbalanced classification: logistic
+            regression, support vector classification, and random forest, compared under 5-fold
+            cross-validation, then on the full dataset, then with hyperparameter tuning.
+          </p>
+          <ul class="results" aria-label="Key results">
+            <li><span class="res-num">0.76</span> <span class="res-txt">Weighted F1 for the selected random forest under 5-fold cross-validation</span></li>
+            <li><span class="res-num">0.78</span> <span class="res-txt">Weighted F1 after hyperparameter tuning (0.77 on the full dataset before tuning)</span></li>
+          </ul>
+          <p class="caveat">Public-dataset portfolio project.</p>
+          <ul class="chips" aria-label="Stack">
+            <li class="chip">Python</li>
+            <li class="chip">Jupyter</li>
+            <li class="chip">Random forest</li>
+            <li class="chip">Support vector classification</li>
+            <li class="chip">Logistic regression</li>
+          </ul>
+          <p class="project-links">
+            <a class="link-out" href="https://github.com/andresrogers/Predict_Flight_Delays" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-head">
+            <p class="card-kicker">NLP · Text classification</p>
+            <h4>News-text classification under competition evaluation</h4>
+          </div>
+          <p class="project-problem">
+            Classify news text for a hackathon leaderboard, scored against a field of
+            2,392 entries.
+          </p>
+          <p class="project-approach">
+            An NLP classification notebook, <code>news_nlp_hackathon.ipynb</code>, over news
+            text.
+          </p>
+          <ul class="results" aria-label="Key results">
+            <li><span class="res-num">212 / 2392</span> <span class="res-txt">Final rank, inside the top 10%</span></li>
+            <li><span class="res-num">0.9720</span> <span class="res-txt">Final leaderboard score</span></li>
+          </ul>
+          <p class="caveat">Hackathon leaderboard result on the competition dataset.</p>
+          <ul class="chips" aria-label="Stack">
+            <li class="chip">Python</li>
+            <li class="chip">NLP</li>
+            <li class="chip">Jupyter</li>
+          </ul>
+          <p class="project-links">
+            <a class="link-out" href="https://github.com/andresrogers/NLP_Classification" target="_blank" rel="noopener noreferrer">Repository<span class="out" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </article>
+      </div>
+
+      <p class="earlier-work reveal">
+        <span class="earlier-label">Earlier work</span>
+        <a class="link-out" href="https://github.com/andresrogers/MachineHack-Hackathon" target="_blank" rel="noopener noreferrer">MachineHack-Hackathon<span class="out" aria-hidden="true">&#8599;</span></a>
+        <span class="earlier-note">2020 hackathon competition project.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Agentic AI engineering -->
+  <section class="section" id="agentic" aria-labelledby="agentic-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="section-kicker">03 · Agentic AI engineering</p>
+        <h2 id="agentic-title">Multi-agent workflows with independent verification</h2>
+        <p class="section-sub">
+          I design multi-agent workflows for production software engineering and data science,
+          with emphasis on orchestration, task decomposition, controlled autonomy, independent
+          verification, and human-in-the-loop decision making.
+        </p>
+      </header>
+
+      <div class="pipeline reveal" aria-labelledby="pipeline-title">
+        <h3 class="side-title" id="pipeline-title">Typical orchestration pattern</h3>
+        <ol class="pipeline-list">
+          <li class="stage">
+            <span class="stage-index" aria-hidden="true">01</span>
+            <h4 class="stage-name">Scout</h4>
+            <p>Explores repositories, dependencies, data flows, APIs, documentation, and relevant system context.</p>
+          </li>
+          <li class="stage">
+            <span class="stage-index" aria-hidden="true">02</span>
+            <h4 class="stage-name">Architect</h4>
+            <p>Designs the solution, defines interfaces, identifies risks, and decomposes work into bounded tasks.</p>
+          </li>
+          <li class="stage">
+            <span class="stage-index" aria-hidden="true">03</span>
+            <h4 class="stage-name">Engineer</h4>
+            <p>Performs scoped implementation against explicit requirements and acceptance criteria.</p>
+          </li>
+          <li class="stage">
+            <span class="stage-index" aria-hidden="true">04</span>
+            <h4 class="stage-name">Reviewer</h4>
+            <p>Independently analyzes diffs, assumptions, tests, regressions, edge cases, and architectural consistency.</p>
+          </li>
+          <li class="stage">
+            <span class="stage-index" aria-hidden="true">05</span>
+            <h4 class="stage-name">Judge</h4>
+            <p>
+              Evaluates implementation evidence and reviewer findings against acceptance criteria,
+              then returns one verdict.
+            </p>
+            <ul class="verdicts" aria-label="Judge verdicts">
+              <li class="verdict">PASS</li>
+              <li class="verdict">REVISE</li>
+              <li class="verdict">REJECT</li>
+              <li class="verdict">ESCALATE</li>
+            </ul>
+          </li>
+          <li class="stage stage-human">
+            <span class="stage-index" aria-hidden="true">06</span>
+            <h4 class="stage-name">Human</h4>
+            <p>Retains final authority over ambiguous, high-risk, or production-impacting decisions.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="agentic-grid">
+        <div class="card reveal">
+          <h3 class="side-title">How throughput is controlled</h3>
+          <p>
+            I use parallel Git worktrees, subagent delegation, context isolation, model routing,
+            MCP integrations, structured outputs, automated validation, quality gates, guardrails,
+            and escalation rules to improve throughput without treating LLM output as inherently
+            correct.
+          </p>
+          <blockquote class="principle">
+            The objective is not maximum autonomy. It is
+            <strong>maximum useful autonomy with inspectability, independent verification, and
+            minimum risk</strong>.
+          </blockquote>
+        </div>
+        <div class="card reveal">
+          <h3 class="side-title">Tools &amp; platforms</h3>
+          <ul class="chips chips-lg" aria-label="Agentic tools and platforms">
+            <li class="chip">Claude Code</li>
+            <li class="chip">OpenAI Codex</li>
+            <li class="chip">OpenCode</li>
+            <li class="chip">MCP</li>
+            <li class="chip">Subagents</li>
+            <li class="chip">Git worktrees</li>
+            <li class="chip">Tool-enabled agents</li>
+            <li class="chip">LLM APIs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section section-alt" id="experience" aria-labelledby="experience-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="section-kicker">04 · Experience</p>
+        <h2 id="experience-title">A 12+ year engineering trajectory</h2>
+        <p class="section-sub">
+          Across revenue management, financial services, e-commerce, industrial systems, and
+          applied research. Organized by domain and impact.
+        </p>
+      </header>
+
+      <ol class="timeline">
+        <li class="tl-item reveal">
+          <h3 class="tl-title">Aviation, pricing &amp; revenue management</h3>
+          <p class="tl-sum">
+            Built production ML systems for dynamic pricing, promotional optimization, elasticity
+            estimation, demand forecasting, customer propensity, churn, ancillary revenue, and
+            causal measurement.
+          </p>
+          <ul class="tl-list">
+            <li><strong>US$3M ARR</strong> from dynamic pricing at LATAM Airlines</li>
+            <li>Forecast error reduced from <strong>20% to 9.5%</strong></li>
+            <li>Production deployment on <strong>Vertex AI</strong></li>
+            <li>Difference-in-Differences for campaign incrementality</li>
+            <li>Route-level elasticity and MILP-based ancillary revenue optimization</li>
+          </ul>
+        </li>
+
+        <li class="tl-item reveal">
+          <h3 class="tl-title">Financial systems</h3>
+          <p class="tl-sum">
+            Applied Bayesian modeling, forecasting, financial data validation, MLOps, and agentic
+            software engineering to revenue and financial systems.
+          </p>
+          <ul class="tl-list">
+            <li>Hierarchical Bayesian modeling</li>
+            <li>Revenue-critical pipeline auditing and production-data reconciliation</li>
+            <li>Walk-forward forecasting with calibrated prediction intervals</li>
+            <li>AWS production deployment and automated business-system integration</li>
+            <li>Multi-agent engineering in large codebases, with reviewer and judge quality gates</li>
+          </ul>
+        </li>
+
+        <li class="tl-item reveal">
+          <h3 class="tl-title">Industrial machine learning</h3>
+          <p class="tl-sum">
+            Built predictive and optimization systems for physical processes and large-scale
+            industrial time series.
+          </p>
+          <ul class="tl-list">
+            <li>Physics-Informed Neural Networks (PINNs) and inverse optimization</li>
+            <li>Soft sensors and predictive optimization</li>
+            <li>Anomaly detection and predictive maintenance</li>
+            <li>Large-scale industrial time series</li>
+          </ul>
+        </li>
+
+        <li class="tl-item reveal">
+          <h3 class="tl-title">NLP &amp; recommender systems</h3>
+          <p class="tl-sum">
+            Developed NLP and personalization systems.
+          </p>
+          <ul class="tl-list">
+            <li>Transformer-based financial news classification and sentiment analysis</li>
+            <li>Collaborative filtering recommender systems</li>
+            <li>Personalized business intelligence systems</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Technical expertise -->
+  <section class="section" id="expertise" aria-labelledby="expertise-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="section-kicker">05 · Technical expertise</p>
+        <h2 id="expertise-title">Stack and methods</h2>
+      </header>
+
+      <div class="skill-grid">
+        <section class="card skill reveal" aria-labelledby="skill-ml">
+          <h3 class="side-title" id="skill-ml">Machine Learning</h3>
+          <ul class="chips" aria-label="Machine learning skills">
+            <li class="chip">Forecasting</li>
+            <li class="chip">Time series</li>
+            <li class="chip">Classification</li>
+            <li class="chip">Propensity modeling</li>
+            <li class="chip">Churn modeling</li>
+            <li class="chip">Recommender systems</li>
+            <li class="chip">Anomaly detection</li>
+            <li class="chip">Predictive maintenance</li>
+            <li class="chip">Soft sensors</li>
+            <li class="chip">PINNs</li>
+            <li class="chip">Scikit-learn</li>
+            <li class="chip">XGBoost</li>
+            <li class="chip">LightGBM</li>
+            <li class="chip">PyTorch</li>
+            <li class="chip">TensorFlow</li>
+            <li class="chip">Keras</li>
+          </ul>
+        </section>
+
+        <section class="card skill reveal" aria-labelledby="skill-stats">
+          <h3 class="side-title" id="skill-stats">Statistics &amp; Optimization</h3>
+          <ul class="chips" aria-label="Statistics and optimization skills">
+            <li class="chip">Bayesian modeling</li>
+            <li class="chip">PyMC</li>
+            <li class="chip">Causal inference</li>
+            <li class="chip">A/B testing</li>
+            <li class="chip">Difference-in-Differences</li>
+            <li class="chip">Incrementality measurement</li>
+            <li class="chip">Price elasticity</li>
+            <li class="chip">Dynamic pricing</li>
+            <li class="chip">Promotion optimization</li>
+            <li class="chip">Revenue optimization</li>
+            <li class="chip">MILP</li>
+            <li class="chip">SciPy</li>
+            <li class="chip">CVXPY</li>
+            <li class="chip">PuLP</li>
+            <li class="chip">Inverse optimization</li>
+          </ul>
+        </section>
+
+        <section class="card skill reveal" aria-labelledby="skill-genai">
+          <h3 class="side-title" id="skill-genai">Generative AI &amp; Agents</h3>
+          <ul class="chips" aria-label="Generative AI and agent skills">
+            <li class="chip">Large language models</li>
+            <li class="chip">RAG</li>
+            <li class="chip">Agentic workflows</li>
+            <li class="chip">Multi-agent orchestration</li>
+            <li class="chip">LLM tool use</li>
+            <li class="chip">MCP</li>
+            <li class="chip">Human-in-the-loop AI</li>
+            <li class="chip">Embedding-based retrieval</li>
+            <li class="chip">Vector databases</li>
+            <li class="chip">NLP</li>
+            <li class="chip">Transformer models</li>
+            <li class="chip">Text classification</li>
+            <li class="chip">Financial news sentiment</li>
+            <li class="chip">LangChain</li>
+            <li class="chip">Hugging Face</li>
+            <li class="chip">ChromaDB</li>
+            <li class="chip">Pinecone</li>
+            <li class="chip">Claude Code</li>
+            <li class="chip">OpenAI Codex</li>
+            <li class="chip">OpenCode</li>
+          </ul>
+        </section>
+
+        <section class="card skill reveal" aria-labelledby="skill-cloud">
+          <h3 class="side-title" id="skill-cloud">Cloud &amp; MLOps</h3>
+          <ul class="chips" aria-label="Cloud and MLOps skills">
+            <li class="chip">GCP</li>
+            <li class="chip">Vertex AI</li>
+            <li class="chip">BigQuery</li>
+            <li class="chip">AWS</li>
+            <li class="chip">Azure</li>
+            <li class="chip">Docker</li>
+            <li class="chip">Git</li>
+            <li class="chip">CI/CD</li>
+            <li class="chip">MLOps</li>
+          </ul>
+        </section>
+
+        <section class="card skill reveal" aria-labelledby="skill-data">
+          <h3 class="side-title" id="skill-data">Data Engineering</h3>
+          <ul class="chips" aria-label="Data engineering skills">
+            <li class="chip">Python</li>
+            <li class="chip">SQL</li>
+            <li class="chip">PySpark</li>
+            <li class="chip">Pandas</li>
+            <li class="chip">NumPy</li>
+            <li class="chip">R</li>
+            <li class="chip">Production-data reconciliation</li>
+            <li class="chip">Pipeline auditing</li>
+            <li class="chip">Freshness controls</li>
+            <li class="chip">Regression checks</li>
+            <li class="chip">Edge-case analysis</li>
+            <li class="chip">Large-scale time series</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & languages -->
+  <section class="section section-alt" id="education" aria-labelledby="education-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="section-kicker">06 · Education &amp; languages</p>
+        <h2 id="education-title">Training</h2>
+      </header>
+
+      <div class="edu-grid">
+        <div class="card reveal">
+          <p class="card-kicker">University of Chile</p>
+          <p class="edu-note">Ranked top 1% globally and top 6 regionally by QS Rankings 2026.</p>
+
+          <div class="degree">
+            <h3 class="degree-title">MSc, Chemical Engineering</h3>
+            <p class="honor">Summa Cum Laude</p>
+            <p>
+              Quantitative and industrial engineering track: statistical modeling, mathematical
+              optimization, industrial process modeling, and data-driven methods.
+            </p>
+            <p class="thesis">
+              <strong>MSc thesis:</strong> Machine Learning Classification for Bioinformatics and
+              Genetic Sequence Analysis, achieving <strong>88.8% sensitivity</strong> and
+              <strong>85.5% specificity</strong>.
+            </p>
+          </div>
+
+          <div class="degree">
+            <h3 class="degree-title">Civil Engineer, Biotechnology specialization</h3>
+            <p class="honor">Summa Cum Laude</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="side-title">Languages</h3>
+          <dl class="lang-list">
+            <dt>Spanish</dt>
+            <dd>Native</dd>
+            <dt>English</dt>
+            <dd>Advanced professional · IELTS Academic 8.0 / 9.0</dd>
+          </dl>
+
+          <h3 class="side-title side-title-spaced">Professional focus</h3>
+          <ul class="chips" aria-label="Professional focus">
+            <li class="chip">Pricing</li>
+            <li class="chip">Forecasting</li>
+            <li class="chip">Revenue management</li>
+            <li class="chip">Causal ML</li>
+            <li class="chip">Decision science</li>
+            <li class="chip">Optimization</li>
+            <li class="chip">Production ML</li>
+            <li class="chip">MLOps</li>
+            <li class="chip">Generative AI</li>
+            <li class="chip">LLMs</li>
+            <li class="chip">RAG</li>
+            <li class="chip">Agentic AI</li>
+            <li class="chip">Multi-agent systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="section-kicker">07 · Contact</p>
+        <h2 id="contact-title">Turning complex and imperfect data into production decision systems with measurable business impact</h2>
+        <p class="section-sub">
+          Chile · Remote collaboration with US/Canada teams · EST timezone.
+        </p>
+      </header>
+
+      <ul class="contact-list reveal" aria-label="Contact links">
+        <li>
+          <a class="contact-card" href="mailto:andres.rogers@gmail.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">andres.rogers@gmail.com</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-card" href="https://www.linkedin.com/in/andres-rogers" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/andres-rogers<span class="out" aria-hidden="true">&#8599;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-card" href="https://github.com/andresrogers" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/andresrogers<span class="out" aria-hidden="true">&#8599;</span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-name">Andrés Rogers · 2026</p>
+    <p class="footer-src">
+      <a href="https://github.com/andresrogers/andresrogers.github.io" target="_blank" rel="noopener noreferrer">Source of this site<span class="out" aria-hidden="true">&#8599;</span></a>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

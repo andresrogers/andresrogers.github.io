@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Andres Rogers">
+  <rect width="32" height="32" rx="7" fill="#0a0c0f"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" fill="none" stroke="#242a33"/>
+  <path d="M5 25C9 25 10 9.5 16 9.5C22 9.5 23 17.5 27 20.5" fill="none" stroke="#5fe0cd" stroke-width="2.3" stroke-linecap="round"/>
+  <circle cx="16" cy="9.5" r="3.4" fill="#5fe0cd" stroke="#0a0c0f" stroke-width="1.6"/>
+</svg>
